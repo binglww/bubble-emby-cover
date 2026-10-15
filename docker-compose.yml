@@ -1,0 +1,13 @@
+services:
+  bubble-emby-cover:
+    image: bubbleemby/bubble-emby-cover:latest
+    container_name: bubble-emby-cover
+    ports:
+      - "8088:8080"
+    environment:
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: "请改成你的密码"
+      TZ: Asia/Shanghai
+    volumes:
+      - /opt/bubble-emby-cover/data:/data
+    restart: unless-stopped
