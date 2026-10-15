@@ -1,12 +1,12 @@
 services:
   bubble-emby-cover:
-    image: bubbleemby/bubble-emby-cover:latest
+    image: bubbleemby/bubble-emby-cover:v1.0.0
     container_name: bubble-emby-cover
     ports:
       - "8088:8080"
     environment:
       ADMIN_USERNAME: admin
-      ADMIN_PASSWORD: "请改成你的密码"
+      ADMIN_PASSWORD: "" # 留空自动生成随机密码，在容器日志中查看；也可以直接填写自己的密码
       TZ: Asia/Shanghai
     volumes:
       - /opt/bubble-emby-cover/data:/data
