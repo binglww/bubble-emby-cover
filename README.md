@@ -12,7 +12,7 @@
 
 编辑 `docker-compose.yml`：
 
-- `environment.ADMIN_PASSWORD`：直接填写自己的管理员密码；默认留空，每次启动生成随机密码，在 1Panel 容器日志或 `docker compose logs bubble-emby-cover` 中查看。不要填写「请改成你的密码」，服务会拒绝使用该占位值启动。
+- `environment.ADMIN_PASSWORD`：把占位文字改成自己的管理员密码。
 - `environment.ADMIN_USERNAME`：管理员用户名，默认 `admin`。
 - `ports`：默认 `8088:8080`，需要换访问端口时修改左侧的 `8088`。
 - `image`：默认使用 `latest`；需要固定版本时将末尾标签改为对应版本，例如 `v1.0.0`。
@@ -25,13 +25,9 @@ docker compose pull
 docker compose up -d
 ```
 
-打开 `http://服务器IP:8088`，使用 `admin` 和设置的密码（留空时使用日志中的随机密码）登录。在「设置」里添加 Emby 地址和 API Key。
+打开 `http://服务器IP:8088`，使用 `admin` 和设置的密码登录。在「设置」里添加 Emby 地址和 API Key。
 
 Emby 地址需能从容器内访问。填写 Emby 所在服务器的内网地址；容器里的 `127.0.0.1` 指向封面工具自身。
-
-若使用 1Panel 反向代理，可在 `environment` 中增加 `TRUSTED_PROXIES`，填反向代理连接本容器时的源 IP，多个地址用逗号分隔。默认不信任 `X-Real-IP`、`X-Forwarded-For` 等请求头，登录限流按直连来源计算。只信任你控制的代理，并让代理覆盖 `X-Real-IP` 和 `X-Forwarded-Proto`、正确追加 `X-Forwarded-For`；不要填写全部内网网段。
-
-Emby 重定向只允许同协议、主机和端口；如果 Emby 会跳转到另一个地址，请直接填写最终地址。修改已保存的 Emby 地址后，需要重新填写 API Key。
 
 ### 使用 1Panel
 
