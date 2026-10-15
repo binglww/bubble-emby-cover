@@ -6,6 +6,10 @@
 
 镜像地址：`bubbleemby/bubble-emby-cover:latest`。
 
+## 模板预览
+
+![Bubble Emby Cover 41 个模板预览](docs/templates-overview.jpg)
+
 ## 部署
 
 下载本仓库的 `docker-compose.yml`，放到服务器的 `/opt/bubble-emby-cover` 目录。所有参数直接写在 Compose 中，不需要额外的配置文件。
