@@ -4,7 +4,7 @@
 
 本仓库提供使用说明和 Docker 部署配置。源码在私有仓库维护，由 GitHub Actions 构建镜像并发布到 Docker Hub 的 `bubbleemby` 账号。镜像同时支持 Linux AMD64 和 ARM64，Docker 会自动选择服务器对应的架构。
 
-镜像地址：`bubbleemby/bubble-emby-cover:v1.0.0`。
+镜像地址：`bubbleemby/bubble-emby-cover:latest`。
 
 ## 部署
 
@@ -15,7 +15,7 @@
 - `environment.ADMIN_PASSWORD`：直接填写自己的管理员密码；默认留空，每次启动生成随机密码，在 1Panel 容器日志或 `docker compose logs bubble-emby-cover` 中查看。不要填写「请改成你的密码」，服务会拒绝使用该占位值启动。
 - `environment.ADMIN_USERNAME`：管理员用户名，默认 `admin`。
 - `ports`：默认 `8088:8080`，需要换访问端口时修改左侧的 `8088`。
-- `image`：默认固定为 `v1.0.0`；需要固定版本时将末尾标签改为对应版本，例如 `v1.0.0`。
+- `image`：默认使用 `latest`；需要固定版本时将末尾标签改为对应版本，例如 `v1.0.0`。
 
 启动：
 

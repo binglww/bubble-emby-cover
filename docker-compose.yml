@@ -1,6 +1,6 @@
 services:
   bubble-emby-cover:
-    image: bubbleemby/bubble-emby-cover:v1.0.0
+    image: bubbleemby/bubble-emby-cover:latest
     container_name: bubble-emby-cover
     ports:
       - "8088:8080"
