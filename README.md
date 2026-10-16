@@ -1,6 +1,6 @@
 # Bubble Emby Cover
 
-为 Emby 媒体库生成封面，内置 **41 个模板**，支持多台 Emby、模板预览、静态与动态封面、定时更新和原封面恢复。
+为 Emby 媒体库生成封面，内置 **50+ 个模板**，支持多台 Emby、模板预览、静态与动态封面、定时更新和原封面恢复。
 
 本仓库提供使用说明和 Docker 部署配置。源码在私有仓库维护，由 GitHub Actions 构建镜像并发布到 Docker Hub 的 `bubbleemby` 账号。镜像同时支持 Linux AMD64 和 ARM64，Docker 会自动选择服务器对应的架构。
 
