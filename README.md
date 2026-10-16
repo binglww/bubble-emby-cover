@@ -8,7 +8,7 @@
 
 ## 模板预览
 
-![Bubble Emby Cover 41 个模板预览](docs/templates-overview.jpg)
+![Bubble Emby Cover 41 个模板预览](docs/templates-overview.webp)
 
 ## 部署
 
@@ -38,8 +38,6 @@ Emby 地址需能从容器内访问。填写 Emby 所在服务器的内网地址
 1. 通过文件管理，把 `docker-compose.yml` 放到上述目录，直接修改其中的用户名、密码等参数。
 2. 在「容器 → 编排 → 创建 → 路径选择」中，选择 `/opt/bubble-emby-cover/docker-compose.yml` 并部署。
 3. 如需通过 IP 直接访问，在防火墙和安全组中允许所配置的端口。
-
-镜像公开后，拉取无需 GitHub 登录，服务器也不需要安装 Go、Node 或数据库。
 
 ## 更新
 
